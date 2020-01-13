@@ -1,0 +1,6 @@
+framework module Pods_MakeMem {
+  umbrella header "Pods-MakeMem-umbrella.h"
+
+  export *
+  module * { export * }
+}
