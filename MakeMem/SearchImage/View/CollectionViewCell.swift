@@ -12,7 +12,6 @@ import Kingfisher
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
-    private var task: URLSessionDataTask?
     
     func render(response: ItemsInfo) {
         let str = response.link

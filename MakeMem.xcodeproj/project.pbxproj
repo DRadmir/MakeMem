@@ -17,12 +17,14 @@
 		FA3A574F23CC99EE00CD649F /* GoogleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A574E23CC99EE00CD649F /* GoogleResponse.swift */; };
 		FA3A575123CC9A0D00CD649F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A575023CC9A0D00CD649F /* CollectionViewCell.swift */; };
 		FA3A575323CC9A3F00CD649F /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A575223CC9A3F00CD649F /* CollectionViewController.swift */; };
-		FA3A575523CC9A5E00CD649F /* CollectionViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A575423CC9A5E00CD649F /* CollectionViewDataSourse.swift */; };
+		FA3A575523CC9A5E00CD649F /* CollectionViewControllerDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A575423CC9A5E00CD649F /* CollectionViewControllerDataSourse.swift */; };
 		FA3A575723CC9A7400CD649F /* CollectionViewControllerLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A575623CC9A7400CD649F /* CollectionViewControllerLayoutDelegate.swift */; };
 		FA3A575923CC9C6600CD649F /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A575823CC9C6600CD649F /* ErrorManager.swift */; };
 		FA3A575B23CC9C8100CD649F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A575A23CC9C8100CD649F /* APIManager.swift */; };
 		FA3A575D23CC9C9700CD649F /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A575C23CC9C9700CD649F /* SearchManager.swift */; };
 		FA3A575F23CCAF3B00CD649F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA3A575E23CCAF3B00CD649F /* .gitignore */; };
+		FA3A576223D0C6F100CD649F /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A576123D0C6F100CD649F /* EditorViewController.swift */; };
+		FA3A576623D0C9DF00CD649F /* CollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A576523D0C9DF00CD649F /* CollectionViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +42,14 @@
 		FA3A574E23CC99EE00CD649F /* GoogleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleResponse.swift; sourceTree = "<group>"; };
 		FA3A575023CC9A0D00CD649F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FA3A575223CC9A3F00CD649F /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		FA3A575423CC9A5E00CD649F /* CollectionViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourse.swift; sourceTree = "<group>"; };
+		FA3A575423CC9A5E00CD649F /* CollectionViewControllerDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerDataSourse.swift; sourceTree = "<group>"; };
 		FA3A575623CC9A7400CD649F /* CollectionViewControllerLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerLayoutDelegate.swift; sourceTree = "<group>"; };
 		FA3A575823CC9C6600CD649F /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		FA3A575A23CC9C8100CD649F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FA3A575C23CC9C9700CD649F /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		FA3A575E23CCAF3B00CD649F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FA3A576123D0C6F100CD649F /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		FA3A576523D0C9DF00CD649F /* CollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		FA3A573023CC98FD00CD649F /* MakeMem */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A576023D0C6BA00CD649F /* Editor */,
 				FA3A574623CC995400CD649F /* SearchImage */,
 				FA3A573123CC98FD00CD649F /* AppDelegate.swift */,
 				FA3A573323CC98FD00CD649F /* SceneDelegate.swift */,
@@ -136,7 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				FA3A575223CC9A3F00CD649F /* CollectionViewController.swift */,
-				FA3A575423CC9A5E00CD649F /* CollectionViewDataSourse.swift */,
+				FA3A575423CC9A5E00CD649F /* CollectionViewControllerDataSourse.swift */,
+				FA3A576523D0C9DF00CD649F /* CollectionViewControllerDelegate.swift */,
 				FA3A575623CC9A7400CD649F /* CollectionViewControllerLayoutDelegate.swift */,
 			);
 			path = Controllers;
@@ -156,6 +162,14 @@
 				FA3A574E23CC99EE00CD649F /* GoogleResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA3A576023D0C6BA00CD649F /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				FA3A576123D0C6F100CD649F /* EditorViewController.swift */,
+			);
+			path = Editor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +294,12 @@
 				FA3A575123CC9A0D00CD649F /* CollectionViewCell.swift in Sources */,
 				FA3A575B23CC9C8100CD649F /* APIManager.swift in Sources */,
 				FA3A575923CC9C6600CD649F /* ErrorManager.swift in Sources */,
-				FA3A575523CC9A5E00CD649F /* CollectionViewDataSourse.swift in Sources */,
+				FA3A575523CC9A5E00CD649F /* CollectionViewControllerDataSourse.swift in Sources */,
+				FA3A576223D0C6F100CD649F /* EditorViewController.swift in Sources */,
 				FA3A573623CC98FD00CD649F /* ViewController.swift in Sources */,
 				FA3A575323CC9A3F00CD649F /* CollectionViewController.swift in Sources */,
 				FA3A573223CC98FD00CD649F /* AppDelegate.swift in Sources */,
+				FA3A576623D0C9DF00CD649F /* CollectionViewControllerDelegate.swift in Sources */,
 				FA3A573423CC98FD00CD649F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

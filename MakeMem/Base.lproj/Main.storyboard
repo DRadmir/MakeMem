@@ -8,23 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="4Qb-Qp-Roq">
-            <objects>
-                <viewController id="GCt-Vo-PHG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oix-Id-f5m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="sLl-ZI-wFj"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="4ow-H9-eCL"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ao0-9g-nbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="635" y="560"/>
-        </scene>
-        <!--Collection View Controller-->
+        <!--Search-->
         <scene sceneID="GnI-KP-9IY">
             <objects>
                 <viewController id="rai-W8-ng1" customClass="CollectionViewController" customModule="MakeMem" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,7 +95,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JFs-j0-OeX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="OIn-4n-5G0"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="OIn-4n-5G0"/>
                     <connections>
                         <outlet property="collectionView" destination="MBk-ZM-lba" id="BCn-9V-f9o"/>
                         <outlet property="searchText" destination="YsK-NH-8yx" id="Dvg-TV-ZKE"/>
@@ -120,6 +104,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRE-La-tBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="634.78260869565224" y="-89.0625"/>
+        </scene>
+        <!--Editor-->
+        <scene sceneID="OZh-h6-5FQ">
+            <objects>
+                <viewController storyboardIdentifier="EditorViewController" id="2TT-lv-DL2" customClass="EditorViewController" customModule="MakeMem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mgo-Je-5ty">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hct-J4-R63">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTs-Bs-Whc">
+                                <rect key="frame" x="354" y="329" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7lx-0b-lCZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                <state key="normal" title="Aa">
+                                    <color key="titleColor" red="0.35415270920000003" green="0.36849564309999999" blue="0.38537055250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addLabelAction:" destination="2TT-lv-DL2" eventType="touchUpInside" id="cUf-BC-0Li"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLb-DR-fPQ">
+                                <rect key="frame" x="354" y="88" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="d2F-tP-VPW"/>
+                                    <constraint firstAttribute="height" constant="40" id="q5x-TD-2yA"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" image="image1">
+                                    <color key="titleColor" red="0.35415270920000003" green="0.36849564309999999" blue="0.38537055250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.35415270920000003" green="0.36849564309999999" blue="0.38537055250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImageButton:" destination="2TT-lv-DL2" eventType="touchUpInside" id="qrN-5I-ELb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="leading" secondItem="dLx-f4-bbo" secondAttribute="leading" constant="354" id="QnP-d6-naq"/>
+                            <constraint firstItem="dLx-f4-bbo" firstAttribute="trailing" secondItem="jLb-DR-fPQ" secondAttribute="trailing" constant="20" id="aJn-fz-pIH"/>
+                            <constraint firstItem="dLx-f4-bbo" firstAttribute="bottom" secondItem="QTs-Bs-Whc" secondAttribute="bottom" constant="444" id="aKy-OC-fKL"/>
+                            <constraint firstItem="jLb-DR-fPQ" firstAttribute="top" secondItem="dLx-f4-bbo" secondAttribute="top" constant="44" id="egI-ME-bfW"/>
+                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="trailing" secondItem="mgo-Je-5ty" secondAttribute="trailingMargin" id="wLd-b1-bZj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dLx-f4-bbo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Editor" image="editor" id="wlk-QP-VPC"/>
+                    <navigationItem key="navigationItem" id="axv-cP-sLa"/>
+                    <connections>
+                        <outlet property="addLabelButton" destination="QTs-Bs-Whc" id="1zc-WL-gzX"/>
+                        <outlet property="imageButton" destination="jLb-DR-fPQ" id="QbG-7T-nmD"/>
+                        <outlet property="imageView" destination="hct-J4-R63" id="Wwi-rh-eCc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yop-vg-23N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="595"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2wd-qQ-p5c">
@@ -132,7 +179,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="rai-W8-ng1" kind="relationship" relationship="viewControllers" id="Hc6-uy-lW5"/>
-                        <segue destination="GCt-Vo-PHG" kind="relationship" relationship="viewControllers" id="Hrc-pd-R0W"/>
+                        <segue destination="2TT-lv-DL2" kind="relationship" relationship="viewControllers" id="shF-EF-h2d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpd-wv-3fy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,4 +187,9 @@
             <point key="canvasLocation" x="-284" y="235"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="editor" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="image1" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="search" width="16.666666030883789" height="16.666666030883789"/>
+    </resources>
 </document>
