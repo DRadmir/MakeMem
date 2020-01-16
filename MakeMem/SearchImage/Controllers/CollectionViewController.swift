@@ -36,7 +36,7 @@ class CollectionViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func searchButton(_ sender: UIButton) {
         
-        if self.searchText.text != "" {
+        if self.searchText.text != nil {
             self.queryText = self.searchText.text!
             self.getCurrentQuery(query: self.queryText)
         }
