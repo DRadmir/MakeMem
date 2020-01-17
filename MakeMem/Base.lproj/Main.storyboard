@@ -118,23 +118,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTs-Bs-Whc">
-                                <rect key="frame" x="354" y="329" width="40" height="40"/>
+                                <rect key="frame" x="354" y="773" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7lx-0b-lCZ"/>
+                                    <constraint firstAttribute="width" secondItem="QTs-Bs-Whc" secondAttribute="height" multiplier="1:1" id="MM7-7S-XII"/>
+                                    <constraint firstAttribute="height" constant="40" id="mOl-tp-LAL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="qGI-Ym-BoB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
                                 <state key="normal" title="Aa">
                                     <color key="titleColor" red="0.35415270920000003" green="0.36849564309999999" blue="0.38537055250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addLabelAction:" destination="2TT-lv-DL2" eventType="touchUpInside" id="cUf-BC-0Li"/>
+                                    <action selector="addLabelButtonAction:" destination="2TT-lv-DL2" eventType="touchUpInside" id="cUf-BC-0Li"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLb-DR-fPQ">
-                                <rect key="frame" x="354" y="88" width="40" height="40"/>
+                                <rect key="frame" x="306" y="773" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="d2F-tP-VPW"/>
-                                    <constraint firstAttribute="height" constant="40" id="q5x-TD-2yA"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZRl-wl-0Ts"/>
+                                    <constraint firstAttribute="width" constant="40" id="kh4-b0-Bf4"/>
+                                    <constraint firstAttribute="width" secondItem="jLb-DR-fPQ" secondAttribute="height" multiplier="1:1" id="woC-NY-P7b"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" image="image1">
@@ -142,17 +145,41 @@
                                     <color key="titleShadowColor" red="0.35415270920000003" green="0.36849564309999999" blue="0.38537055250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addImageButton:" destination="2TT-lv-DL2" eventType="touchUpInside" id="qrN-5I-ELb"/>
+                                    <action selector="addImageButtonAction:" destination="2TT-lv-DL2" eventType="touchUpInside" id="qrN-5I-ELb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAZ-bn-91s">
+                                <rect key="frame" x="258" y="773" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9kG-cY-4zS"/>
+                                    <constraint firstAttribute="width" constant="40" id="QWe-3M-DQ3"/>
+                                    <constraint firstAttribute="width" secondItem="oAZ-bn-91s" secondAttribute="height" multiplier="1:1" id="jKq-Wb-mXP"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" image="dowload">
+                                    <color key="titleColor" red="0.35415270920000003" green="0.36849564309999999" blue="0.38537055250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.35415270920000003" green="0.36849564309999999" blue="0.38537055250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImageButtonAction:" destination="2TT-lv-DL2" eventType="touchUpInside" id="WWK-nb-1WF"/>
+                                    <action selector="saveButtonAction:" destination="2TT-lv-DL2" eventType="touchUpInside" id="ee7-4G-Owf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpC-A8-DYO">
+                                <rect key="frame" x="67" y="411" width="281" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="leading" secondItem="dLx-f4-bbo" secondAttribute="leading" constant="354" id="QnP-d6-naq"/>
-                            <constraint firstItem="dLx-f4-bbo" firstAttribute="trailing" secondItem="jLb-DR-fPQ" secondAttribute="trailing" constant="20" id="aJn-fz-pIH"/>
-                            <constraint firstItem="dLx-f4-bbo" firstAttribute="bottom" secondItem="QTs-Bs-Whc" secondAttribute="bottom" constant="444" id="aKy-OC-fKL"/>
-                            <constraint firstItem="jLb-DR-fPQ" firstAttribute="top" secondItem="dLx-f4-bbo" secondAttribute="top" constant="44" id="egI-ME-bfW"/>
-                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="trailing" secondItem="mgo-Je-5ty" secondAttribute="trailingMargin" id="wLd-b1-bZj"/>
+                            <constraint firstItem="jLb-DR-fPQ" firstAttribute="leading" secondItem="oAZ-bn-91s" secondAttribute="trailing" constant="8" id="2CG-q3-wLE"/>
+                            <constraint firstItem="dLx-f4-bbo" firstAttribute="trailing" secondItem="QTs-Bs-Whc" secondAttribute="trailing" constant="20" id="Iu5-5c-JNs"/>
+                            <constraint firstItem="jLb-DR-fPQ" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" id="JwZ-Bk-97y"/>
+                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" id="PZA-gj-Fpz"/>
+                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="leading" secondItem="jLb-DR-fPQ" secondAttribute="trailing" constant="8" id="hrH-Bm-2hC"/>
+                            <constraint firstItem="oAZ-bn-91s" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" id="oWt-8d-yD6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dLx-f4-bbo"/>
                     </view>
@@ -162,11 +189,12 @@
                         <outlet property="addLabelButton" destination="QTs-Bs-Whc" id="1zc-WL-gzX"/>
                         <outlet property="imageButton" destination="jLb-DR-fPQ" id="QbG-7T-nmD"/>
                         <outlet property="imageView" destination="hct-J4-R63" id="Wwi-rh-eCc"/>
+                        <outlet property="saveButton" destination="oAZ-bn-91s" id="PZo-Md-cAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yop-vg-23N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="595"/>
+            <point key="canvasLocation" x="634.78260869565224" y="594.64285714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2wd-qQ-p5c">
@@ -188,6 +216,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dowload" width="500" height="500"/>
         <image name="editor" width="16.666666030883789" height="16.666666030883789"/>
         <image name="image1" width="166.66667175292969" height="166.66667175292969"/>
         <image name="search" width="16.666666030883789" height="16.666666030883789"/>
