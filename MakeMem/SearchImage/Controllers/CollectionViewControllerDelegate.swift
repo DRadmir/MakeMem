@@ -13,13 +13,14 @@ extension CollectionViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let vc2 = storyboard?.instantiateViewController(withIdentifier: "EditorViewController") as! EditorViewController
-        //обязательно в сториборде в пункте identify дайте название ViewController2
-
-        vc2.image = [images[indexPath.row]]
-        //тут уже на ваше усмотрение, в зависимости какая структура у вашего массива и что именно вам надо передовать.
-        self.present(vc2, animated: true, completion: nil)
+        let editorVC = storyboard?.instantiateViewController(withIdentifier: "EditorViewController") as! EditorViewController
         
+        let temp = self.collectionView.cellForItem(at: indexPath) as! CollectionViewCell
+        let tempImage = temp.imageView.image
+        
+        editorVC.currentImage = tempImage
+        
+        self.present(editorVC, animated: true, completion: nil)
     }
     
 }

@@ -21,9 +21,9 @@ class EditorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let link = image[0]
-        render(response: link)
+        
+        imageView.image = currentImage
+        
     }
     
     @IBAction func addLabelAction(_ sender: UIButton) {
@@ -32,12 +32,6 @@ class EditorViewController: UIViewController {
     @IBAction func addImageButton(_ sender: UIButton) {
     }
     
-    func render(response: ItemsInfo) {
-        let str = response.link
-        guard let url = URL(string: str) else { return }
-        imageView.kf.indicatorType = .activity
-        imageView.kf.setImage(with: url)
-    }
 
     /*
     // MARK: - Navigation
