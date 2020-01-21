@@ -118,10 +118,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTs-Bs-Whc">
-                                <rect key="frame" x="354" y="773" width="40" height="40"/>
+                                <rect key="frame" x="354" y="773" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QTs-Bs-Whc" secondAttribute="height" multiplier="1:1" id="MM7-7S-XII"/>
-                                    <constraint firstAttribute="height" constant="40" id="mOl-tp-LAL"/>
+                                    <constraint firstAttribute="height" constant="44" id="mOl-tp-LAL"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="qGI-Ym-BoB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
@@ -133,10 +133,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLb-DR-fPQ">
-                                <rect key="frame" x="306" y="773" width="40" height="40"/>
+                                <rect key="frame" x="306" y="773" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ZRl-wl-0Ts"/>
-                                    <constraint firstAttribute="width" constant="40" id="kh4-b0-Bf4"/>
+                                    <constraint firstAttribute="height" constant="44" id="ZRl-wl-0Ts"/>
+                                    <constraint firstAttribute="width" constant="44" id="kh4-b0-Bf4"/>
                                     <constraint firstAttribute="width" secondItem="jLb-DR-fPQ" secondAttribute="height" multiplier="1:1" id="woC-NY-P7b"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
@@ -149,10 +149,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAZ-bn-91s">
-                                <rect key="frame" x="258" y="773" width="40" height="40"/>
+                                <rect key="frame" x="258" y="773" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="9kG-cY-4zS"/>
-                                    <constraint firstAttribute="width" constant="40" id="QWe-3M-DQ3"/>
+                                    <constraint firstAttribute="height" constant="44" id="9kG-cY-4zS"/>
+                                    <constraint firstAttribute="width" constant="44" id="QWe-3M-DQ3"/>
                                     <constraint firstAttribute="width" secondItem="oAZ-bn-91s" secondAttribute="height" multiplier="1:1" id="jKq-Wb-mXP"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
@@ -165,21 +165,35 @@
                                     <action selector="saveButtonAction:" destination="2TT-lv-DL2" eventType="touchUpInside" id="ee7-4G-Owf"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpC-A8-DYO">
-                                <rect key="frame" x="67" y="411" width="281" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpC-A8-DYO">
+                                <rect key="frame" x="66.666666666666686" y="431" width="281" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="h5b-1X-Hf5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldAction:" destination="2TT-lv-DL2" eventType="editingDidEnd" id="hlB-Fi-DvH"/>
+                                </connections>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XCi-5Y-0BX">
+                                <rect key="frame" x="69" y="473" width="276" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fontSizeSliderAction:" destination="2TT-lv-DL2" eventType="valueChanged" id="ve1-lR-gX9"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jLb-DR-fPQ" firstAttribute="leading" secondItem="oAZ-bn-91s" secondAttribute="trailing" constant="8" id="2CG-q3-wLE"/>
-                            <constraint firstItem="dLx-f4-bbo" firstAttribute="trailing" secondItem="QTs-Bs-Whc" secondAttribute="trailing" constant="20" id="Iu5-5c-JNs"/>
-                            <constraint firstItem="jLb-DR-fPQ" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" id="JwZ-Bk-97y"/>
-                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" id="PZA-gj-Fpz"/>
-                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="leading" secondItem="jLb-DR-fPQ" secondAttribute="trailing" constant="8" id="hrH-Bm-2hC"/>
-                            <constraint firstItem="oAZ-bn-91s" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" id="oWt-8d-yD6"/>
+                            <constraint firstItem="bpC-A8-DYO" firstAttribute="centerX" secondItem="mgo-Je-5ty" secondAttribute="centerX" id="0dW-MW-efu"/>
+                            <constraint firstItem="jLb-DR-fPQ" firstAttribute="leading" secondItem="oAZ-bn-91s" secondAttribute="trailing" constant="4" id="2CG-q3-wLE"/>
+                            <constraint firstItem="dLx-f4-bbo" firstAttribute="trailing" secondItem="QTs-Bs-Whc" secondAttribute="trailing" constant="16" id="Iu5-5c-JNs"/>
+                            <constraint firstItem="jLb-DR-fPQ" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" constant="4" id="JwZ-Bk-97y"/>
+                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" constant="4" id="PZA-gj-Fpz"/>
+                            <constraint firstItem="bpC-A8-DYO" firstAttribute="centerY" secondItem="mgo-Je-5ty" secondAttribute="centerY" id="QLT-QV-slp"/>
+                            <constraint firstItem="QTs-Bs-Whc" firstAttribute="leading" secondItem="jLb-DR-fPQ" secondAttribute="trailing" constant="4" id="hrH-Bm-2hC"/>
+                            <constraint firstItem="oAZ-bn-91s" firstAttribute="bottom" secondItem="dLx-f4-bbo" secondAttribute="bottom" constant="4" id="oWt-8d-yD6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dLx-f4-bbo"/>
                     </view>
@@ -187,9 +201,11 @@
                     <navigationItem key="navigationItem" id="axv-cP-sLa"/>
                     <connections>
                         <outlet property="addLabelButton" destination="QTs-Bs-Whc" id="1zc-WL-gzX"/>
+                        <outlet property="fontSizeSlider" destination="XCi-5Y-0BX" id="nwT-oO-5Ac"/>
                         <outlet property="imageButton" destination="jLb-DR-fPQ" id="QbG-7T-nmD"/>
                         <outlet property="imageView" destination="hct-J4-R63" id="Wwi-rh-eCc"/>
                         <outlet property="saveButton" destination="oAZ-bn-91s" id="PZo-Md-cAv"/>
+                        <outlet property="textField" destination="bpC-A8-DYO" id="2lb-Cf-dwX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yop-vg-23N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -216,7 +232,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dowload" width="500" height="500"/>
+        <image name="dowload" width="166.66667175292969" height="166.66667175292969"/>
         <image name="editor" width="16.666666030883789" height="16.666666030883789"/>
         <image name="image1" width="166.66667175292969" height="166.66667175292969"/>
         <image name="search" width="16.666666030883789" height="16.666666030883789"/>

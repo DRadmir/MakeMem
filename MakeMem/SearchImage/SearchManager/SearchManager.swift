@@ -57,10 +57,9 @@ final class SearchManager: APIManager {
         let request = SearchType.Current(engineID: self.engineID, query: query, apiKey: self.apiKey, searchType: self.searchType, startIndex: startIndex).request
         
         fetchData(request: request, result: { (response) in
-            
+//            print(response)
         }, completion: completion)
-
+        
     }
-    
     
 }

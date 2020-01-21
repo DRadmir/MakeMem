@@ -15,27 +15,45 @@ class EditorViewController: UIViewController {
     @IBOutlet weak var addLabelButton: UIButton!
     @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var fontSizeSlider: UISlider!
     
     var currentImage: UIImage?
     var image = [ItemsInfo]()
-    
+    var labelArray = [UILabel]()
+    var editingLabel = false {
+        didSet {
+            if self.editingLabel {
+                self.fontSizeSlider.isHidden = false
+            } else {
+                self.fontSizeSlider.isHidden = true
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        saveButton.isUserInteractionEnabled = false
-        
         imageView.image = currentImage
-        
+        saveButton.isUserInteractionEnabled = false
+        textField?.delegate = self
+        textField?.isHidden = true
+        fontSizeSlider.isHidden = true
+
     }
     
     @IBAction func addLabelButtonAction(_ sender: UIButton) {
+        editingLabel = true
+        textField?.isHidden = false
+        textField?.clearsOnBeginEditing = true
+        textField?.becomeFirstResponder()
     }
     
     @IBAction func addImageButtonAction(_ sender: UIButton) {
-        
         self.chooseImagePicker(source: .photoLibrary)
-        
+    }
+    
+    @IBAction func textFieldAction(_ sender: UITextField) {
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton) {
@@ -50,6 +68,24 @@ class EditorViewController: UIViewController {
         }
     }
     
+    @IBAction func fontSizeSliderAction(_ sender: UISlider) {
+
+    }
+    
+    func createLabel() {
+        let label = UILabel()
+        label.text = textField.text
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.frame = CGRect(origin: self.view.center, size: CGSize(width: view.frame.width - 50, height: label.frame.height))
+        label.sizeToFit()
+        self.labelArray.append(label)
+        self.view.addSubview(label)
+    }
+    
+    
+
+    
     /*
     // MARK: - Navigation
 
@@ -62,25 +98,22 @@ class EditorViewController: UIViewController {
 
 }
 
-extension EditorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func chooseImagePicker(source: UIImagePickerController.SourceType) {
-        if UIImagePickerController.isSourceTypeAvailable(source) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.allowsEditing = true
-            imagePicker.sourceType = source
-            present(imagePicker, animated: true)
+extension EditorViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        if textField.text != nil {
+            createLabel()
+
+            textField.isHidden = true
+            textField.resignFirstResponder()
+            
+            editingLabel = false
+            
+            tapGestureSetting()
+            panGestureSetting()
         }
+        return true
     }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        imageView.image = info[.editedImage] as? UIImage
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        dismiss(animated: true, completion: nil)
-        
-    }
-    
 }
+

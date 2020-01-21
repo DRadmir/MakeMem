@@ -25,6 +25,8 @@
 		FA3A575F23CCAF3B00CD649F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA3A575E23CCAF3B00CD649F /* .gitignore */; };
 		FA3A576223D0C6F100CD649F /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A576123D0C6F100CD649F /* EditorViewController.swift */; };
 		FA3A576623D0C9DF00CD649F /* CollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A576523D0C9DF00CD649F /* CollectionViewControllerDelegate.swift */; };
+		FA5EF39323D73BC2006A9B5A /* EditorVCImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5EF39223D73BC2006A9B5A /* EditorVCImagePickerController.swift */; };
+		FA5EF39523D73C57006A9B5A /* EditorGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5EF39423D73C57006A9B5A /* EditorGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		FA3A575E23CCAF3B00CD649F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FA3A576123D0C6F100CD649F /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		FA3A576523D0C9DF00CD649F /* CollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
+		FA5EF39223D73BC2006A9B5A /* EditorVCImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorVCImagePickerController.swift; sourceTree = "<group>"; };
+		FA5EF39423D73C57006A9B5A /* EditorGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				FA3A576123D0C6F100CD649F /* EditorViewController.swift */,
+				FA5EF39223D73BC2006A9B5A /* EditorVCImagePickerController.swift */,
+				FA5EF39423D73C57006A9B5A /* EditorGestureRecognizer.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -297,6 +303,8 @@
 				FA3A575523CC9A5E00CD649F /* CollectionViewControllerDataSourse.swift in Sources */,
 				FA3A576223D0C6F100CD649F /* EditorViewController.swift in Sources */,
 				FA3A573623CC98FD00CD649F /* ViewController.swift in Sources */,
+				FA5EF39323D73BC2006A9B5A /* EditorVCImagePickerController.swift in Sources */,
+				FA5EF39523D73C57006A9B5A /* EditorGestureRecognizer.swift in Sources */,
 				FA3A575323CC9A3F00CD649F /* CollectionViewController.swift in Sources */,
 				FA3A573223CC98FD00CD649F /* AppDelegate.swift in Sources */,
 				FA3A576623D0C9DF00CD649F /* CollectionViewControllerDelegate.swift in Sources */,
